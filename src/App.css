@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Font */
+
+@font-face {
+  font-family: "BIREVA";
+  src: url('../font/BIREVA.otf');
+  
+}
+
+@font-face {
+  font-family: "X_BAMBI";
+  src: url('../font/X_BAMBI.TTF');
+  
+}
+
+@font-face {
+  font-family: "Spaced TTF";
+  src: url('../font/Spaced\ TTF.ttf');
+  
+}
+
+@font-face {
+  font-family: "Spaced TTF";
+  src: url('../font/Spaced\ TTF.ttf');
+  
+}
+
+
+@font-face {
+  font-family: "MODERA";
+  src: url('../font/MODERA.ttf');
+  
+}
+
+@font-face {
+  font-family: "Exo-DemiBold";
+  src: url('../font/Exo-DemiBold.otf');
+  
+}
+
+
+
+
+/* END Font */
+
+/* Navbarnya */
+.namenya{
+  padding-right: 900px;
+  font-family: 'BIREVA', sans-serif !important;
+  font-size: x-large;
+  
+}
+
+.logonav{
+  margin-left: -90px;
+}
+
+
+/* End Navbarnya */
+
+.createdata{
+  font-family: 'BIREVA', sans-serif !important;
+  margin-right: 1px;
+  background-color: #D30534;
+  border:none;
+  margin-left: -240px;
+  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  position: relative;
+
+}
+
+.titlelogin{
+  padding-right: 350px;
+  font-size: xx-large;
+  font-family: 'BIREVA', sans-serif !important;
+
+
+}
+
+
+
+/* Footer */
+
+.footer {
+  padding: 0 0 6px 0;
+  background-color: #0077AE;
+  
+}
+
+.footer img {
+  width: 26%;
+}
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+  
+  
+}
+
+
+
+/* END Footer */
