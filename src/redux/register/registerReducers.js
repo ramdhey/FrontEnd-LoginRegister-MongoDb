@@ -1,10 +1,11 @@
-import {USER_SET_EMAIL,USER_SET_PASSWORD,USER_SET_FULLNAME,USER_REGISTER_RESET_FORM} from '../ActionType'
+import {USER_REGISTER_RESET_FORM,USER_SET_EMAIL,USER_SET_NAME,USER_SET_PASSWORD} from '../ActionType'
 
 
 const initialState = {
     email:"",
+    nama:"",
     password:"",
-    fullname:"",
+    
 }
 
 const userRegisterReducers = (state=initialState,action) =>{
@@ -18,11 +19,12 @@ const userRegisterReducers = (state=initialState,action) =>{
                 ...state,
                 email:action.payload.email,
             }
-        case USER_SET_FULLNAME:
-            return{
-                ...state,
-                fullname:action.payload.fullname,
-            }
+        case USER_SET_NAME:
+                return{
+                    ...state,
+                    nama:action.payload.nama,
+                }
+        
         case USER_SET_PASSWORD:
             return{
                 ...state,

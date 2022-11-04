@@ -1,8 +1,8 @@
-import ServerAPI from "../../../API/server";
+import ServerAPI from "../../API/server";
 import sweetalert from 'sweetalert2'
 
-import {USER_SET_EMAIL,USER_SET_PASSWORD,USER_SET_FULLNAME,USER_REGISTER_RESET_FORM} from '../ActionType'
-import { Navigate } from "react-router-dom";
+import {USER_REGISTER_RESET_FORM,USER_SET_EMAIL,USER_SET_NAME,USER_SET_PASSWORD} from '../ActionType'
+// import { Navigate } from "react-router-dom";
 
 
 const resetForm = () =>{
@@ -20,14 +20,19 @@ const setEmail = (email)=>{
     }
 }
 
-const setFullname = (fullname)=>{
+const setNama = (nama)=>{
     return{
-        type: USER_SET_FULLNAME,
+        type: USER_SET_NAME,
         payload:{
-            fullname:fullname,
+            nama:nama,
         }
     }
 }
+
+
+
+
+
 
 const setPassword = (password)=>{
     return{
@@ -41,14 +46,16 @@ const setPassword = (password)=>{
 
 
 
-const register = (email,fullname,password,navigate)=>async(dispatch)=>{
+const register = (email,nama,password,navigate)=>async(dispatch)=>{
     try {
 
         const registerData = {
             email:email,
-            name:fullname,
+            nama:nama,
             password:password,
         }
+        
+        
 
         const postRegisData = await ServerAPI({
             method:"POST",
@@ -56,18 +63,26 @@ const register = (email,fullname,password,navigate)=>async(dispatch)=>{
             url:"/register/",
             data: registerData,
         })
+        console.log(postRegisData)
+
+        
 
         if (postRegisData.status===200){
             sweetalert.fire({
                 title: "Selamat Registrasi Anda Berhasil ",
                 icon:"success",
-                timer:1700,
+                timer:2000,
             })
             navigate("/login")
 
         }
         
     } catch (error) {
+        sweetalert.fire({
+            title: "Gagal Registrasi ",
+            icon:"error",
+            timer:1700,
+        })
         console.log(error.response.data)
         
     }
@@ -76,7 +91,9 @@ const register = (email,fullname,password,navigate)=>async(dispatch)=>{
 const userRegisterAction = {
     resetForm,
     setEmail,
-    setFullname,
+    setNama,
     setPassword,
     register,
 }
+
+export default userRegisterAction

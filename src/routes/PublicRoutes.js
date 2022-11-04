@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import { Login } from '../Screen/Login';
-import { Register } from '../Screen/Register';
+import Register from './../Screen/Register';
 
 
 const PublicRoutes = () => {

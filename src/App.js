@@ -7,8 +7,13 @@ import { Login } from './Screen/Login';
 import { Register } from './Screen/Register';
 
 
+
+
+
 import PrivateRoutes from './routes/PrivateRoutes';
 import PublicRoutes from './routes/PublicRoutes';
+
+
 
 function App() {
   return (
