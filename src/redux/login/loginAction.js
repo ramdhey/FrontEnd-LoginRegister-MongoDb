@@ -69,9 +69,9 @@ const Login = (email,password,navigate)=>async (dispatch) =>{
           },
         });
         
-  
+        
         dispatch(userBerandaAction.setBerandaData(getDetailUser.data.user));
-        localStorage.setItem("user", JSON.stringify(getDetailUser.data.user));
+        localStorage.setItem("user", JSON.stringify(getDetailUser));
   
         navigate("/beranda");
         

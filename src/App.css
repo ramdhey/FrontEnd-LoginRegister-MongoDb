@@ -111,6 +111,19 @@
 
 }
 
+.logout{
+  font-family: 'BIREVA', sans-serif !important;
+  
+  background-color: #D30534;
+  border:none;
+  
+  height: 100px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  
+
+}
+
 .titlelogin{
   padding-right: 350px;
   font-size: xx-large;

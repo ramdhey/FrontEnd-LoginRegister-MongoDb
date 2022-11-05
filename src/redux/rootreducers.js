@@ -5,8 +5,6 @@ import userBerandaReducer from './beranda/berandaReducer'
 
 
 
-import React from 'react';
-import userBeradaReducer from './beranda/berandaReducer';
 
 const rootreducers = combineReducers({
     userRegister:userRegisterReducers,

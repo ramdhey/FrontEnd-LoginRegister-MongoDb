@@ -9,14 +9,15 @@ import Card from 'react-bootstrap/Card';
 import logonav from "../image/notelist.svg"
 
 
+
 export const Beranda = () => {
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
     useEffect(()=>{
-        const loginUser = localStorage.getItem("user")
+        const loggedInUser = localStorage.getItem("user")
 
-        if(loginUser){
+        if(loggedInUser){
             dispatch(userBerandaAction.fetchBeranda())
         }
         // esLint-disable-next-line
@@ -24,11 +25,11 @@ export const Beranda = () => {
 
     const {user} = useSelector((state)=>state.userBeranda)
 
-    if(user===null){
+    if(user === null){
         return<div>loading</div>
     }
 
-    console.log(user)
+    
 
     const logout = ()=>{
         localStorage.clear()
@@ -41,17 +42,18 @@ export const Beranda = () => {
 
     return (
         <div>
-            <h2 className='mt-4' style={{marginLeft:'-900px'}}>Welcome </h2>
+            <h2 className='mt-4' style={{marginLeft:'-600px'}}>Welcome on my Beranda {user.user.nama}  </h2>
             <div>
            
            <div className="row mt-5 mb-5 " >
-               
-           <Card  className='cardnya mb-5' style={{    height :'300px' ,width: '250px', backgroundImage: 'linear-gradient(to left,#10B8B3,#F18504)', margin: 'auto', borderRadius: '15px' }}>
+            
+           <Card  className='cardnya mb-5' style={{    height :'600px' ,width: '400px', backgroundImage: 'linear-gradient(to left,#10B8B3,#F18504)', margin: 'auto', borderRadius: '15px' }}>
                            <Card.Img variant="top" src={logonav} className="fotokontak" />
                                <Card.Body>
-                                   <Card.Title className="namanya"><p></p></Card.Title>
+                                   <Card.Title className="namanya">Nama anda adalah {user.user.nama}</Card.Title>
                                    <Card.Text className="nomornya"> 
-                                   <p>jika  mau keluar silahkan logout yaa</p>
+                                   Email anda adalah {user.user.email}
+                                   
                                    </Card.Text>
                                    
                                </Card.Body>
@@ -60,7 +62,7 @@ export const Beranda = () => {
            </div>
            </div>
            <span>
-        <Button type='submit' className='createdata' onClick={logout}>LogOut</Button>
+        <Button type='submit' className='logout' onClick={logout}>LogOut</Button>
 
         </span>
         </div>

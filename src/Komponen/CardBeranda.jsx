@@ -12,7 +12,7 @@ const CardBeranda = () => {
         <Card  className='cardnya mb-5' style={{    height :'300px' ,width: '250px', backgroundImage: 'linear-gradient(to left,#10B8B3,#F18504)', margin: 'auto', borderRadius: '15px' }}>
                         <Card.Img variant="top" src={logonav} className="fotokontak" />
                             <Card.Body>
-                                <Card.Title className="namanya"><p>Ini</p></Card.Title>
+                                <Card.Title className="namanya"></Card.Title>
                                 <Card.Text className="nomornya"> 
                                 <p>Cek</p>
                                 </Card.Text>

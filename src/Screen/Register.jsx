@@ -21,11 +21,10 @@ const Register = () => {
   useEffect(()=>{
     dispatch(userRegisterAction.resetForm())
 
-    // let token = localStorage.getItem("token")
-    // if(token && token !== "undifined"){
-    //   navigate("/login")
-    // }
-
+    let token = localStorage.getItem("token")
+    if(token && token !== "undefined"){
+      navigate()
+    }
 
     // esLint-disable-next-line
   },[])
